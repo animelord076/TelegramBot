@@ -1,0 +1,74 @@
+============[Date]============
+[ 2024-09-07 20:05:13  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+curl_error_code:		28
+curl_error:		Failed to connect to 192.168.1.4 port 8080 after 21036 ms: Timed out
+=========[Sent Data]==========
+[ref]
+ref.update_id= 262896084
+ref.message.message_id= 300
+ref.message.from.id= 7182050583
+ref.message.from.is_bot= false
+ref.message.from.first_name= امیر
+ref.message.from.language_code= en
+ref.message.chat.id= 7182050583
+ref.message.chat.first_name= امیر
+ref.message.chat.type= private
+ref.message.date= 1725732291
+ref.message.text= /start
+ref.message.entities.0.offset= 0
+ref.message.entities.0.length= 6
+ref.message.entities.0.type= bot_command
+
+
+[ref]
+ref.text= سلام به ربات مدیریت کانال و گروه خوش امدید.
+
+
+============[Trace]===========
+#0 D:\Xampp\htdocs\Telegram\AdminBot\Telegram.php(1867): TelegramErrorLogger::log(Array, Array)
+#1 D:\Xampp\htdocs\Telegram\AdminBot\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 D:\Xampp\htdocs\Telegram\AdminBot\Telegram.php(182): Telegram->endpoint('sendMessage', Array)
+#3 D:\Xampp\htdocs\Telegram\AdminBot\index.php(18): Telegram->sendMessage(Array)
+#4 {main}
+
+============[Date]============
+[ 2024-09-07 20:05:34  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+curl_error_code:		28
+curl_error:		Failed to connect to 192.168.1.4 port 8080 after 21032 ms: Timed out
+=========[Sent Data]==========
+[ref]
+ref.update_id= 262896084
+ref.message.message_id= 300
+ref.message.from.id= 7182050583
+ref.message.from.is_bot= false
+ref.message.from.first_name= امیر
+ref.message.from.language_code= en
+ref.message.chat.id= 7182050583
+ref.message.chat.first_name= امیر
+ref.message.chat.type= private
+ref.message.date= 1725732291
+ref.message.text= /start
+ref.message.entities.0.offset= 0
+ref.message.entities.0.length= 6
+ref.message.entities.0.type= bot_command
+
+
+[ref]
+ref.text= جهت مدیریت کانال ابتدا ربات رو به کانال یا گروه اضافه کنید 
+
+  سپس پیامی از کانال یا گروه که به صورت ادمین اضافه شدید رو 
+
+  فروارد کنید.
+
+
+============[Trace]===========
+#0 D:\Xampp\htdocs\Telegram\AdminBot\Telegram.php(1867): TelegramErrorLogger::log(Array, Array)
+#1 D:\Xampp\htdocs\Telegram\AdminBot\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 D:\Xampp\htdocs\Telegram\AdminBot\Telegram.php(182): Telegram->endpoint('sendMessage', Array)
+#3 D:\Xampp\htdocs\Telegram\AdminBot\index.php(22): Telegram->sendMessage(Array)
+#4 {main}
+
