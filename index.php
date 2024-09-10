@@ -1,8 +1,7 @@
 <?php
 include 'Telegram.php';
 include 'Database.php';
-$telegram = new Telegram('7271222333:AAEMblOTR_mC4pBlNrk8jH7wksoCJ6ePt58',true,
-['type'=>'http','url'=>'192.168.1.4','port'=>'8080']);
+$telegram = new Telegram('7271222333:AAEMblOTR_mC4pBlNrk8jH7wksoCJ6ePt58');
 
 $db = Database::getInstance();
 
