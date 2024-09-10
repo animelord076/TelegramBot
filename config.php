@@ -3,9 +3,9 @@
     // config.php  
     return [  
         'host' => 'localhost',  
-        'db' => 'adminbot',  
-        'user' => 'root',  
-        'pass' => '',  
+        'db' => 'animelor_telegramBot',  
+        'user' => 'animelor_animelor',  
+        'pass' => 'Amir5683407@',  
         'charset' => 'utf8mb4',  
     ];  
 
