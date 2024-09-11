@@ -4,17 +4,18 @@ include 'Database.php';
 $telegram = new Telegram('7271222333:AAEMblOTR_mC4pBlNrk8jH7wksoCJ6ePt58');
 
 $db = Database::getInstance();
+$data = file_get_contents("php://input");
 
 // مسیر فایل برای ذخیره داده‌ها  
 $filePath = 'data_log.txt'; // مسیر دلخواه برای ذخیره  
 
 // جمع‌آوری داده‌های POST و GET  
-$data = [  
-    'POST' => $_POST,  
-    'GET' => $_GET,  
-    'REQUEST' => $_REQUEST,  
-    'SERVER' => $_SERVER,  
-];  
+// $data = [  
+//     'POST' => $_POST,  
+//     'GET' => $_GET,  
+//     'REQUEST' => $_REQUEST,  
+//     'SERVER' => $_SERVER,  
+// ];  
 
 // ذخیره داده‌ها در فایل  
 file_put_contents($filePath, print_r($data, true), FILE_APPEND);  
