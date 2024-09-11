@@ -7,35 +7,31 @@ $db = Database::getInstance();
 $data = file_get_contents("php://input");
 
 
-// مسیر فایل برای ذخیره داده‌ها  
-$filePath = 'public_html/data_log.txt'; // مسیر دلخواه برای ذخیره  
+// دریافت داده‌های JSON  
+$data = file_get_contents("php://input");  
 
-// بررسی وجود فایل و ایجاد آن در صورت عدم وجود  
-if (!file_exists($filePath)) {  
-    // ایجاد فایل جدید  
-    $handle = fopen($filePath, 'w');  
-    if ($handle === false) {  
-        die("خطا در ایجاد فایل.");  
-    }  
-    fclose($handle);  
+// تبدیل داده‌های JSON به آرایه PHP  
+$jsonData = json_decode($data, true);  
+
+// بررسی وجود داده‌ها  
+if ($jsonData) {  
+    // مسیر فایل برای ذخیره داده‌ها  
+    $filePath = 'received_data.txt';  
+
+    // تبدیل داده‌ها به فرمت متنی برای ذخیره  
+    $output = "Number: " . $jsonData['number'] . "\n";  
+    $output .= "Message: " . $jsonData['message'] . "\n";  
+    $output .= "Received at: " . date('Y-m-d H:i:s') . "\n\n";  
+
+    // ذخیره داده‌ها در فایل  
+    file_put_contents($filePath, $output, FILE_APPEND);  
+
+    // نمایش پیغام موفقیت  
+    echo "داده‌ها با موفقیت ذخیره شدند.";  
+} else {  
+    // در صورت عدم وجود داده  
+    echo "خطا: داده‌ای دریافت نشد.";  
 }  
-
-// جمع‌آوری داده‌های POST و GET  
-$data = [  
-    'POST' => $_POST,  
-    'GET' => $_GET,  
-    'REQUEST' => $_REQUEST,  
-    'SERVER' => $_SERVER,  
-];  
-
-// ذخیره داده‌ها در فایل و جلوگیری از خطا  
-if (file_put_contents($filePath, print_r($data, true), FILE_APPEND) === false) {  
-    die("خطا در ذخیره داده‌ها.");  
-}
-else
-{
-    echo 'Done';
-}
 
 
 $text = $telegram->Text();
