@@ -1,6 +1,8 @@
 <?php
+
 include 'Telegram.php';
 include 'Database.php';
+
 $telegram = new Telegram('7271222333:AAEMblOTR_mC4pBlNrk8jH7wksoCJ6ePt58');
 
 $db = Database::getInstance();
