@@ -31,7 +31,11 @@ $data = [
 // ذخیره داده‌ها در فایل و جلوگیری از خطا  
 if (file_put_contents($filePath, print_r($data, true), FILE_APPEND) === false) {  
     die("خطا در ذخیره داده‌ها.");  
-}  
+}
+else
+{
+    echo 'Done';
+}
 
 
 $text = $telegram->Text();
